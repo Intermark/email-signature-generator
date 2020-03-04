@@ -80,7 +80,7 @@
                                                             </table>
                                                         </td>
                                                         <td style="padding: 0px; color: rgb(64, 53, 56);"><a
-                                                                href="tel:{{ aesg_phone }}" color="#403538" class="sc-gipzik iyhjGb"
+                                                                v-bind:href="'tel:' + aesg_phone.replace(/[^0-9]/g, '')" color="#403538" class="sc-gipzik iyhjGb"
                                                                 style="text-decoration: none; color: rgb(64, 53, 56); font-size: 12px;"><span id="aesg_phone">{{ aesg_phone }}</span></a></td>
                                                     </tr>
                                                     <tr height="25" style="vertical-align: middle;">
