@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="aesg">
 
         <header class="text-center py-5">
             <h1>Alloy Email Signature Generator</h1>
@@ -16,13 +16,13 @@
         </header>
         <div class="form-row align-items-center justify-content-center">
             <div class="col-auto">
-                <input type="text" name="Name" id="aesg_fullname_input" data-field-id="aesg_fullname" class="aesg_form-field form-control" value="Full Name">
+                <input type="text" id="aesg_fullname_input" v-model="aesg_fullname" class="aesg_form-field form-control" placeholder="Full Name">
             </div>
             <div class="col-auto">
-                <input type="text" name="Position" id="aesg_position_input" data-field-id="aesg_position" class="aesg_form-field form-control" value="Position">
+                <input type="text" id="aesg_position_input" v-model="aesg_position" class="aesg_form-field form-control" placeholder="Position">
             </div>
             <div class="col-auto">
-                <input type="text" name="Phone" id="aesg_phone_input" data-field-id="aesg_phone" class="aesg_form-field form-control" value="(205) 703-7273">
+                <input type="text" id="aesg_phone_input" v-model="aesg_phone" class="aesg_form-field form-control" placeholder="Phone">
             </div>
         </div>
         <hr class="mt-5">
@@ -44,10 +44,10 @@
                                         <td style="vertical-align: middle;">
                                             <h3 color="#403538" class="sc-fBuWsC eeihxG"
                                                 style="margin: 0px; font-size: 18px; color: rgb(64, 53, 56);">
-                                                <span id="aesg_fullname">{{ name }}</span></h3>
+                                                <span id="aesg_fullname">{{ aesg_fullname }}</span></h3>
                                             <p color="#403538" font-size="medium" class="sc-fMiknA bxZCMx"
                                                 style="margin: 0px; color: rgb(64, 53, 56); font-size: 14px; line-height: 22px;">
-                                                <span id="aesg_position">{{ position }}</span></p>
+                                                <span id="aesg_position">{{ aesg_position }}</span></p>
                                         </td>
                                         <td width="30">
                                             <div style="width: 30px;"></div>
@@ -80,8 +80,8 @@
                                                             </table>
                                                         </td>
                                                         <td style="padding: 0px; color: rgb(64, 53, 56);"><a
-                                                                href="tel:{{ phone }}" color="#403538" class="sc-gipzik iyhjGb"
-                                                                style="text-decoration: none; color: rgb(64, 53, 56); font-size: 12px;"><span id="aesg_phone">{{ phone }}</span></a></td>
+                                                                href="tel:{{ aesg_phone }}" color="#403538" class="sc-gipzik iyhjGb"
+                                                                style="text-decoration: none; color: rgb(64, 53, 56); font-size: 12px;"><span id="aesg_phone">{{ aesg_phone }}</span></a></td>
                                                     </tr>
                                                     <tr height="25" style="vertical-align: middle;">
                                                         <td width="30" style="vertical-align: middle;">
@@ -217,69 +217,52 @@
         </p>
     </div>
       
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Updating Your Email Signature</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <ol>
-                    <li>In Gmail, click the small Gear icon under the Alloy logo, in the top right corner. Click Settings.</li>
-                    <li>Scroll down to the section labeled “Signature”.</li>
-                    <li>Paste into the text editor.</li>
-                    <li>Click the “Save Changes” button at the very bottom of the page.</li>
-                </ol>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Updating Your Email Signature</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-      </div>
+        <div class="modal-body">
+            <ol>
+                <li>In Gmail, click the small Gear icon under the Alloy logo, in the top right corner. Click Settings.</li>
+                <li>Scroll down to the section labeled “Signature”.</li>
+                <li>Paste into the text editor.</li>
+                <li>Click the “Save Changes” button at the very bottom of the page.</li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js" integrity="sha256-MPgtcamIpCPKRRm1ppJHkvtNBAuE71xcOM+MmQytXi8=" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
-        // Handle Text Input
-        let signature = document.getElementById('aesg_email_signature')
-        let fields = document.getElementsByClassName('aesg_form-field')
-        const template = signature.innerHTML
-
-        function renderSignature() {
-            const data = {
-                name: document.getElementById('aesg_fullname_input').value,
-                position: document.getElementById('aesg_position_input').value,
-                phone: document.getElementById('aesg_phone_input').value,
+        //this is a vue instance
+        new Vue({
+            el: '#aesg',
+            data: {
+                aesg_fullname: 'Name',
+                aesg_position: 'Position',
+                aesg_phone: '(205) 703-7273',
             }
+        })
 
-            signature.innerHTML = Mustache.render(template, data)
-        }
+        let $signature = $('#aesg_email_signature')
+        let $copyButton = $('#aesg_copy')
 
-        renderSignature()
-
-        for (let i = 0; i < fields.length; i++) {
-            let field = fields[i]
-            let sigFieldId = field.dataset.fieldId
-
-            
-            field.addEventListener('keyup', function(e) {
-                renderSignature()
-                // document.getElementById(sigFieldId).innerText = e.target.value
-            })
-        }
-
-        // Handle Copy HTML
-        let copyButton = document.getElementById('aesg_copy')
-        copyButton.addEventListener('click', function(e) {
+        $copyButton.on('click', function(e) {
             //Before we copy, we are going to select the text.
-            let text = signature;
+            let text = $signature[0];
             let selection = window.getSelection();
             let range = document.createRange();
             range.selectNodeContents(text);
@@ -287,7 +270,7 @@
             selection.addRange(range);
             //add to clipboard.
             document.execCommand('copy');
-            copyButton.innerText = 'Signature Copied!'
+            $copyButton.text('Signature Copied!')
         })
     </script>
 </body>
