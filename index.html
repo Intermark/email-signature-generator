@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alloy Email Signature Generator</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
     <div class="container" id="aesg">
 
         <header class="text-center py-5">
             <h1>Alloy Email Signature Generator</h1>
             <p>Fill out the information below to update the signature template.</p>
-            <p class="small font-italic"><a href="#" data-toggle="modal" data-target="#exampleModal">How do I set my new signature in Gmail?</a></p>
+            <p class="small font-italic"><a href="#" data-toggle="modal" data-target="#exampleModal">How do I set my new
+                    signature in Gmail?</a></p>
         </header>
         <div class="form-row align-items-center justify-content-center">
             <div class="col-auto">
-                <input type="text" id="aesg_fullname_input" v-model="aesg_fullname" class="aesg_form-field form-control" placeholder="Full Name">
+                <input type="text" id="aesg_fullname_input" v-model="aesg_fullname" class="aesg_form-field form-control"
+                    placeholder="Full Name">
             </div>
             <div class="col-auto">
-                <input type="text" id="aesg_position_input" v-model="aesg_position" class="aesg_form-field form-control" placeholder="Position">
+                <input type="text" id="aesg_position_input" v-model="aesg_position" class="aesg_form-field form-control"
+                    placeholder="Position">
             </div>
             <div class="col-auto">
-                <input type="text" id="aesg_phone_input" v-model="aesg_phone" class="aesg_form-field form-control" placeholder="Phone">
+                <input type="text" id="aesg_phone_input" v-model="aesg_phone" class="aesg_form-field form-control"
+                    placeholder="Phone">
             </div>
         </div>
         <hr class="mt-5">
@@ -38,7 +45,7 @@
                                     <tr>
                                         <td width="150" style="vertical-align: middle;"><span class="sc-kgAjT cuzzPp"
                                                 style="margin-right: 20px; display: block;"><img
-                                                    src="https://drive.google.com/uc?id=1BC8EnTaD4iLSJMBW4-YPkdVyi5eYZ4Eb"
+                                                    src="https://drive.google.com/uc?id=1q-OR2Ks1-_zheHzjKk944fFB45NlbzJf"
                                                     role="presentation" width="130" class="sc-cHGsZl bHiaRe"
                                                     style="max-width: 130px;"></span></td>
                                         <td style="vertical-align: middle;">
@@ -53,7 +60,8 @@
                                             <div style="width: 30px;"></div>
                                         </td>
                                         <td color="#DC232E" direction="vertical" width="1" class="sc-jhAzac hmXDXQ"
-                                            style="width: 1px; border-bottom: none; border-left: 1px solid rgb(220, 35, 46);"></td>
+                                            style="width: 1px; border-bottom: none; border-left: 1px solid rgb(220, 35, 46);">
+                                        </td>
                                         <td width="30">
                                             <div style="width: 30px;"></div>
                                         </td>
@@ -63,12 +71,14 @@
                                                 <tbody>
                                                     <tr height="25" style="vertical-align: middle;">
                                                         <td width="30" style="vertical-align: middle;">
-                                                            <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                                            <table cellpadding="0" cellspacing="0"
+                                                                class="sc-gPEVay eQYmiW"
                                                                 style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="vertical-align: bottom;"><span color="#DC232E"
-                                                                                width="11" class="sc-jlyJG bbyJzT"
+                                                                        <td style="vertical-align: bottom;"><span
+                                                                                color="#DC232E" width="11"
+                                                                                class="sc-jlyJG bbyJzT"
                                                                                 style="display: block; background-color: rgb(220, 35, 46);"><img
                                                                                     src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
                                                                                     color="#DC232E" width="13"
@@ -80,17 +90,21 @@
                                                             </table>
                                                         </td>
                                                         <td style="padding: 0px; color: rgb(64, 53, 56);"><a
-                                                                v-bind:href="'tel:' + aesg_phone.replace(/[^0-9]/g, '')" color="#403538" class="sc-gipzik iyhjGb"
-                                                                style="text-decoration: none; color: rgb(64, 53, 56); font-size: 12px;"><span id="aesg_phone">{{ aesg_phone }}</span></a></td>
+                                                                v-bind:href="'tel:' + aesg_phone.replace(/[^0-9]/g, '')"
+                                                                color="#403538" class="sc-gipzik iyhjGb"
+                                                                style="text-decoration: none; color: rgb(64, 53, 56); font-size: 12px;"><span
+                                                                    id="aesg_phone">{{ aesg_phone }}</span></a></td>
                                                     </tr>
                                                     <tr height="25" style="vertical-align: middle;">
                                                         <td width="30" style="vertical-align: middle;">
-                                                            <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                                            <table cellpadding="0" cellspacing="0"
+                                                                class="sc-gPEVay eQYmiW"
                                                                 style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="vertical-align: bottom;"><span color="#DC232E"
-                                                                                width="11" class="sc-jlyJG bbyJzT"
+                                                                        <td style="vertical-align: bottom;"><span
+                                                                                color="#DC232E" width="11"
+                                                                                class="sc-jlyJG bbyJzT"
                                                                                 style="display: block; background-color: rgb(220, 35, 46);"><img
                                                                                     src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
                                                                                     color="#DC232E" width="13"
@@ -101,19 +115,21 @@
                                                                 </tbody>
                                                             </table>
                                                         </td>
-                                                        <td style="padding: 0px;"><a href="https://alloy.digital/" color="#403538"
-                                                                class="sc-gipzik iyhjGb"
+                                                        <td style="padding: 0px;"><a href="https://alloy.digital/"
+                                                                color="#403538" class="sc-gipzik iyhjGb"
                                                                 style="text-decoration: none; color: rgb(64, 53, 56); font-size: 12px;"><span>https://alloy.digital/</span></a>
                                                         </td>
                                                     </tr>
                                                     <tr height="25" style="vertical-align: middle;">
                                                         <td width="30" style="vertical-align: middle;">
-                                                            <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                                            <table cellpadding="0" cellspacing="0"
+                                                                class="sc-gPEVay eQYmiW"
                                                                 style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Tahoma;">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td style="vertical-align: bottom;"><span color="#DC232E"
-                                                                                width="11" class="sc-jlyJG bbyJzT"
+                                                                        <td style="vertical-align: bottom;"><span
+                                                                                color="#DC232E" width="11"
+                                                                                class="sc-jlyJG bbyJzT"
                                                                                 style="display: block; background-color: rgb(220, 35, 46);"><img
                                                                                     src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png"
                                                                                     color="#DC232E" width="13"
@@ -124,9 +140,10 @@
                                                                 </tbody>
                                                             </table>
                                                         </td>
-                                                        <td style="padding: 0px;"><span color="#403538" class="sc-csuQGl CQhxV"
-                                                                style="font-size: 12px; color: rgb(64, 53, 56);"><span>101 25th
-                                                                    Street N, Birmingham, AL 35203</span></span></td>
+                                                        <td style="padding: 0px;"><span color="#403538"
+                                                                class="sc-csuQGl CQhxV"
+                                                                style="font-size: 12px; color: rgb(64, 53, 56);"><span>Birmingham,
+                                                                    AL & Atlanta, GA</span></span></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -178,8 +195,8 @@
                                                         <td width="5">
                                                             <div></div>
                                                         </td>
-                                                        <td><a href="https://linkedin.com/company/alloy-birmingham" color="#DC232E"
-                                                                class="sc-hzDkRC kpsoyz"
+                                                        <td><a href="https://linkedin.com/company/alloy-birmingham"
+                                                                color="#DC232E" class="sc-hzDkRC kpsoyz"
                                                                 style="display: inline-block; padding: 0px; background-color: rgb(220, 35, 46);"><img
                                                                     src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
                                                                     alt="linkedin" color="#DC232E" height="24"
@@ -216,36 +233,44 @@
             <button id="aesg_copy" class="btn btn-lg btn-primary">Copy Signature</button>
         </p>
     </div>
-      
+
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Updating Your Email Signature</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Updating Your Email Signature</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol>
+                        <li>In Gmail, click the small Gear icon under the Alloy logo, in the top right corner. Click
+                            Settings.</li>
+                        <li>Scroll down to the section labeled “Signature”.</li>
+                        <li>Paste into the text editor.</li>
+                        <li>Click the “Save Changes” button at the very bottom of the page.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <ol>
-                <li>In Gmail, click the small Gear icon under the Alloy logo, in the top right corner. Click Settings.</li>
-                <li>Scroll down to the section labeled “Signature”.</li>
-                <li>Paste into the text editor.</li>
-                <li>Click the “Save Changes” button at the very bottom of the page.</li>
-            </ol>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script>
         //this is a vue instance
         new Vue({
@@ -260,7 +285,7 @@
         let $signature = $('#aesg_email_signature')
         let $copyButton = $('#aesg_copy')
 
-        $copyButton.on('click', function(e) {
+        $copyButton.on('click', function (e) {
             //Before we copy, we are going to select the text.
             let text = $signature[0];
             let selection = window.getSelection();
@@ -274,4 +299,5 @@
         })
     </script>
 </body>
+
 </html>
